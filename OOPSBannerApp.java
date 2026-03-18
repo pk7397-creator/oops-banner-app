@@ -2,15 +2,18 @@ public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        String name;
+        // If no names are provided
+        if (args.length == 0) {
+            System.out.println("Hello World");
+        } 
+        else {
 
-        if (args.length > 0) {
-            name = args[0];
-        } else {
-            name = "World";
+            // Loop through all command line arguments
+            for (int i = 0; i < args.length; i++) {
+                System.out.println("Hello " + args[i]);
+            }
+
         }
-
-        System.out.println("Hello " + name);
     }
 
 }
